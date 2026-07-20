@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.enapi.com/getting-started/set-up-your-ocpi-handshake-with-enapi
+docs: https://docs.enapi.com/getting-started/set-up-your-ocpi-handshake-with-enapi
+summary:
+  types: [ocpi-token]
+  model: OCPI credentials handshake (token exchange)
+  transport: Authorization header
+  note: >-
+    Enapi does not expose a proprietary auth scheme. Access follows the OCPI
+    Credentials module: a one-time handshake exchanges credentials between partner
+    and Enapi, producing a credential (token) pair. There is no OAuth2/OpenID
+    Connect and no OAuth scope surface.
+schemes:
+- name: OCPI Token
+  type: token
+  in: header
+  header: Authorization
+  encoding:
+    base64_header_2_2_1_plus: >-
+      OCPI 2.2.1+ introduced Base64 encoding of the token in the Authorization
+      header. The token value in the credentials body is unchanged; only the
+      header representation differs. Configured per connection to match the
+      partner platform.
+  handshake:
+    module: Credentials
+    setup: Portal > Settings > Roaming Settings > New Handshake (4-step wizard)
+    methods:
+    - enapi-initiates: partner provides Versions URL + Token A; Enapi initiates
+    - partner-initiates: Enapi provides its Versions URL + Token A; partner initiates
+    enapi_party_id: DE*ENA
+    versions_url_production: https://roaming.enapi.com/ocpi/versions
+    versions_url_staging: https://roaming.staging.enapi.com/ocpi/versions
+  sources:
+  - docs://getting-started/set-up-your-ocpi-handshake-with-enapi
+  - docs://technical-documentation/supported-ocpi-modules-and-capabilities
