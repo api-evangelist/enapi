@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.enapi.com/security-compliance-and-slas
+versioning:
+  scheme: OCPI version negotiation
+  supported: ['2.1.1', '2.2.1', '2.3.0']
+  interoperability: true
+  docs: https://docs.enapi.com/advanced-features/ocpi-version-interoperability
+sla:
+  uptime_target: '99.9%'
+  measurement: rolling monthly basis; scheduled maintenance (announced >=48h ahead) excluded
+  docs: https://docs.enapi.com/security-compliance-and-slas/sla-commitments
+status_page: https://status.enapi.com/
+incident_management:
+  docs: https://docs.enapi.com/security-compliance-and-slas/incident-management
+  severity_levels:
+  - level: Critical
+    definition: Complete platform outage or data breach
+    response_working_hours: < 15 minutes
+    response_outside_hours: < 30 minutes
+  - level: Major
+    definition: Partial degradation or limited-scope issue; core platform functional
+    response_working_hours: < 1 business hour
+    response_outside_hours: next business day
+  - level: Minor
+    definition: Low impact, no operational urgency
+    response_working_hours: next business day
+    response_outside_hours: next business day
+  working_hours: 09:00-17:00 CET, Mon-Fri, excluding public holidays
+  post_incident_review: conducted for Critical incidents
+maintenance:
+  notice: at least 48 hours in advance via designated contact channel
+deprecation:
+  policy_documented: false
+  note: No formal deprecation/Sunset-header policy documented; unsupported OCPI
+    modules (ChargingProfiles, Booking, CANCEL_RESERVATION) are prioritized by
+    partner demand rather than deprecated.

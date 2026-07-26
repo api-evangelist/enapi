@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.enapi.com/getting-started/testing-your-ocpi-handshake-with-enapi
+docs: https://docs.enapi.com/getting-started/testing-your-ocpi-handshake-with-enapi
+summary: >-
+  Enapi provides a staging environment that runs the same OCPI implementation as
+  production, used during onboarding to validate a partner's handshake and
+  connection behaviour before going live. No test cards or magic identifiers are
+  published (this is an OCPI roaming HUB, not a payments API); the test surface is
+  the staging endpoint and the handshake Token A exchange.
+environments:
+- name: staging
+  base_url: https://roaming.staging.enapi.com
+  versions_url: https://roaming.staging.enapi.com/ocpi/versions
+  note: Same OCPI implementation as production — "if it works in staging, it works live."
+- name: production
+  base_url: https://roaming.enapi.com
+  versions_url: https://roaming.enapi.com/ocpi/versions
+test_flow:
+  credential: Token A (partner-generated plain-text token used once to initiate the
+    handshake)
+  enapi_party_id: DE*ENA
+  tooling: Automated testing and validation tools; connection behaviour settings
+    (Base64 tokens, HUB topology, routing headers) are exercised in staging during
+    onboarding.
+notes:
+- No test card numbers, test bank accounts, or magic test identifiers are published.
+- No self-serve sandbox signup; onboarding (and staging access) is arranged via the
+  Enapi team (https://calendly.com/enapi/let-s-talk).

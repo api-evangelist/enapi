@@ -1,0 +1,63 @@
+# ENAPI Docs
+
+## English
+
+- [Getting Started](https://docs.enapi.com/getting-started.md)
+- [Onboarding to ENAPI](https://docs.enapi.com/getting-started/onboarding-to-enapi.md)
+- [Set up your OCPI Handshake with ENAPI](https://docs.enapi.com/getting-started/set-up-your-ocpi-handshake-with-enapi.md)
+- [Testing your OCPI Handshake with ENAPI](https://docs.enapi.com/getting-started/testing-your-ocpi-handshake-with-enapi.md)
+- [The ENAPI Portal](https://docs.enapi.com/getting-started/the-enapi-portal.md)
+- [Settings and Configuration](https://docs.enapi.com/getting-started/settings-and-configuration.md)
+- [Roaming](https://docs.enapi.com/roaming.md)
+- [How to Find New Roaming Partners](https://docs.enapi.com/roaming/how-to-find-new-roaming-partners.md)
+- [How to Send a Roaming Offer](https://docs.enapi.com/roaming/how-to-send-a-roaming-offer.md)
+- [How to Accept a Roaming Offer](https://docs.enapi.com/roaming/how-to-accept-a-roaming-offer.md)
+- [Custom Contract Templates](https://docs.enapi.com/roaming/custom-contract-templates.md)
+- [Roaming Offers Restrictions](https://docs.enapi.com/roaming/roaming-offers-restrictions.md)
+- [Technical Documentation](https://docs.enapi.com/technical-documentation.md)
+- [OCPI Version Support 2.1.1, 2.2.1, and 2.3.0](https://docs.enapi.com/technical-documentation/ocpi-version-support-2.1.1-2.2.1-and-2.3.0.md)
+- [Supported OCPI Modules and Capabilities](https://docs.enapi.com/technical-documentation/supported-ocpi-modules-and-capabilities.md)
+- [How ENAPI Syncs OCPI Data](https://docs.enapi.com/technical-documentation/how-enapi-syncs-ocpi-data.md)
+- [Data Quality](https://docs.enapi.com/data-quality.md)
+- [Introduction to the Data Quality Page](https://docs.enapi.com/data-quality/introduction-to-the-data-quality-page.md)
+- [Understanding Object Counts](https://docs.enapi.com/data-quality/understanding-object-counts.md)
+- [The Sync Activity Log](https://docs.enapi.com/data-quality/the-sync-activity-log.md)
+- [Monitoring Your Connections](https://docs.enapi.com/data-quality/monitoring-your-connections.md)
+- [Common Data Quality Issues and Fixes](https://docs.enapi.com/data-quality/common-data-quality-issues-and-fixes.md)
+- [CDR Clearing](https://docs.enapi.com/cdr-clearing.md)
+- [What is CDR Clearing](https://docs.enapi.com/cdr-clearing/what-is-cdr-clearing.md)
+- [Setting Up CDR Clearing](https://docs.enapi.com/cdr-clearing/setting-up-cdr-clearing.md)
+- [Validation Rules Reference](https://docs.enapi.com/cdr-clearing/validation-rules-reference.md)
+- [The CDR Inbox](https://docs.enapi.com/cdr-clearing/the-cdr-inbox.md)
+- [How to Handle Flagged CDRs](https://docs.enapi.com/cdr-clearing/how-to-handle-flagged-cdrs.md)
+- [Exporting CDR Data](https://docs.enapi.com/cdr-clearing/exporting-cdr-data.md)
+- [Pricing & Tariffs](https://docs.enapi.com/pricing-and-tariffs.md)
+- [How Tariffs Work on ENAPI](https://docs.enapi.com/pricing-and-tariffs/how-tariffs-work-on-enapi.md)
+- [Partner Specific Tariffs CPO Managed](https://docs.enapi.com/pricing-and-tariffs/partner-specific-tariffs-cpo-managed.md)
+- [ENAPI Managed Tariff Adjustments](https://docs.enapi.com/pricing-and-tariffs/enapi-managed-tariff-adjustments.md)
+- [Tariff Overview for eMSPs](https://docs.enapi.com/pricing-and-tariffs/tariff-overview-for-emsps.md)
+- [Advanced Features](https://docs.enapi.com/advanced-features.md)
+- [Hub Routing and Message Broadcasting](https://docs.enapi.com/advanced-features/hub-routing-and-message-broadcasting.md)
+- [OCPI Version Interoperability](https://docs.enapi.com/advanced-features/ocpi-version-interoperability.md)
+- [Plug & Charge (ISO 15118)](https://docs.enapi.com/advanced-features/plug-and-charge-iso-15118.md)
+- [Request Tracing and Debugging](https://docs.enapi.com/advanced-features/request-tracing-and-debugging.md)
+- [Security, Compliance & SLAs](https://docs.enapi.com/security-compliance-and-slas.md)
+- [SLA Commitments](https://docs.enapi.com/security-compliance-and-slas/sla-commitments.md)
+- [Incident Management](https://docs.enapi.com/security-compliance-and-slas/incident-management.md)
+- [Compliance and Data Residency](https://docs.enapi.com/security-compliance-and-slas/compliance-and-data-residency.md)
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information, you can query the documentation dynamically by asking a question.
+Perform an HTTP GET request on a page URL with the `ask` query parameter:
+```
+GET https://docs.enapi.com/getting-started.md?ask=<question>
+```
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

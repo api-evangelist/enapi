@@ -1,0 +1,64 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.enapi.com
+docs: https://docs.enapi.com/technical-documentation
+summary: >-
+  Cross-cutting request/response semantics for the Enapi OCPI HUB. Enapi implements
+  the OCPI protocol, so most conventions follow the OCPI standard; the tracing,
+  routing, and version-negotiation behaviours below are documented by Enapi.
+authentication:
+  style: OCPI token in Authorization header (Base64 for 2.2.1+)
+  ref: authentication/enapi-authentication.yml
+versioning:
+  style: OCPI version negotiation
+  mechanism: >-
+    Partners fetch the versions endpoint and negotiate a shared OCPI version
+    during handshake. Enapi supports 2.1.1, 2.2.1, and 2.3.0 and translates
+    between versions transparently (version interoperability).
+  versions_url: https://roaming.enapi.com/ocpi/versions
+  docs: https://docs.enapi.com/advanced-features/ocpi-version-interoperability
+request_tracing:
+  docs: https://docs.enapi.com/advanced-features/request-tracing-and-debugging
+  headers:
+  - name: X-Request-ID
+    scope: Unique per HTTP request; identifies one specific call. Enapi generates a
+      new value for each forwarded request per the OCPI spec.
+  - name: X-Correlation-ID
+    scope: Shared across related requests; preserved across the entire chain and the
+      right ID to share when coordinating with a partner.
+  recommendation: Set both headers (UUIDs) on every request and log them on both sides.
+routing:
+  docs: https://docs.enapi.com/getting-started/set-up-your-ocpi-handshake-with-enapi
+  headers:
+  - name: OCPI-to-party-id
+    when: Multi-party routing enabled; Enapi fans out one request per target party.
+  - name: OCPI-to-country-code
+    when: Multi-party routing enabled.
+  hub_topology: >-
+    Enapi operates as an OCPI HUB (party DE*ENA), sharing the HUB role plus both
+    CPO and EMSP SENDER+RECEIVER endpoint sets during credentials exchange;
+    degrades to CPO+EMSP or single-party for platforms that do not support HUB.
+error_envelope:
+  standard: OCPI
+  fields: [status_code, status_message, timestamp, data]
+  note: >-
+    Error semantics follow the OCPI response envelope (numeric status_code with a
+    human-readable status_message), not RFC 9457 problem+json. Derived from the
+    OCPI standard Enapi implements, not from an Enapi-specific error reference.
+idempotency:
+  documented: false
+  note: No idempotency-key contract is documented; retry with exponential backoff is
+    recommended for transient errors.
+retries:
+  recommendation: Implement retry logic with exponential backoff.
+  docs: https://docs.enapi.com/security-compliance-and-slas/incident-management
+pagination:
+  documented: OCPI standard
+  note: >-
+    Pagination follows the OCPI standard (offset/limit query params with Link and
+    X-Total-Count / X-Limit response headers on paginated modules such as
+    Locations, Sessions, CDRs, Tariffs, Tokens). Not separately documented by Enapi.
+cross_links:
+  authentication: authentication/enapi-authentication.yml
+  lifecycle: lifecycle/enapi-lifecycle.yml
+  conformance: conformance/enapi-conformance.yml

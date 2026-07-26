@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.enapi.com
+standards:
+- id: ocpi-2.1.1
+  conforms: true
+  evidence: Supported OCPI version (docs technical-documentation/ocpi-version-support)
+- id: ocpi-2.2.1
+  conforms: true
+  evidence: Supported OCPI version; adds HUB role, HubClientInfo, Base64 tokens
+- id: ocpi-2.3.0
+  conforms: true
+  evidence: Supported OCPI version (Booking module not yet supported)
+- id: iso-15118
+  conforms: true
+  evidence: Plug & Charge (ISO 15118) listed under Advanced Features
+- id: gdpr
+  conforms: true
+  evidence: >-
+    Acts as data processor on behalf of partners (controllers); data minimization
+    to OCPI-required fields; documented at
+    docs.enapi.com/security-compliance-and-slas/compliance-and-data-residency
+- id: iso-27001
+  conforms: false
+  evidence: Stated as "working toward ISO 27001 certification in 2026" — not yet certified
+- id: oauth2
+  conforms: false
+  evidence: Auth is OCPI token exchange, not OAuth2
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use the OCPI response envelope (status_code/status_message), not
+    application/problem+json
+ocpi_modules:
+  supported: [Credentials, Locations, Tariffs, Tokens, Sessions, CDRs, Commands,
+    HubClientInfo, Payments]
+  not_yet_supported: [ChargingProfiles, Booking, CANCEL_RESERVATION]
+  docs: https://docs.enapi.com/technical-documentation/supported-ocpi-modules-and-capabilities
