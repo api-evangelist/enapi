@@ -64,6 +64,93 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Enapi is a company surfaced as a portfolio company of seedcamp and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Enapi (ENAPI) operates a unified roaming and clearing platform for the electric vehicle charging industry, brokering transactions between Charge Point Operators (CPOs) and e-Mobility Service Providers (eMSPs). Rather than exposing a proprietary API, Enapi implements the open OCPI (Open Charge Point Interface) standard out-of-the-box across versions 2.1.1, 2.2.1, and 2.3.0, operating as an OCPI HUB that handles version interoperability, message routing, and endpoint fan-out on behalf of partners. Its three product lines are Roaming (peer-to-peer commercial connections while Enapi handles the technical integration), Technical (standardized OCPI onboarding with automated testing and a staging environment), and Financial CDR Clearing (real-time Charge Detail Record validation, dispute flagging, and settlement). As of early 2024 the platform connects over 700,000 charge points and works with most major eMSPs including partners such as TotalEnergies, ChargePoint, ubitricity, Plugsurfing, Monta, and Eneco.
 
-Backed by: seedcamp — http://enapi.com
+**Areas:** Company · EV Charging · OCPI · Roaming · E-Mobility · Charge Point Operator · eMSP · Electric Vehicles · CDR Clearing · Interoperability · Hub
+
+## Enapi on APIs.io
+
+Everything profiled for Enapi is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/enapi/](https://apis.io/providers/enapi/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Enapi OCPI Roaming API](https://apis.io/apis/enapi/enapi-ocpi-roaming-api/) — Enapi's OCPI HUB endpoint for EV charging roaming. Implements the Open Charge Point Interface (OCPI) 2.1.1 / 2.2.1 / 2.3.0 across the Credentials,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Enapi Authentication](https://apis.io/security/enapi/enapi-authentication/)
+- [Enapi Domain Security](https://apis.io/security/enapi/enapi-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://enapi.com)
+- [Documentation](https://docs.enapi.com)
+- [Getting started](https://docs.enapi.com/getting-started)
+- [API reference](https://docs.enapi.com/technical-documentation)
+- [Sign up](https://calendly.com/enapi/let-s-talk)
+- [Support](https://docs.enapi.com/security-compliance-and-slas/incident-management)
+- [Compliance](https://docs.enapi.com/security-compliance-and-slas/compliance-and-data-residency)
+- [Terms of service](https://enapi.com/terms-of-use)
+- [Privacy policy](https://enapi.com/privacy-policy)
+- [Status](https://status.enapi.com/)
+
+## API Evangelist rating
+
+**Kin Score 33.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 61.9 |
+| Access clarity | 42.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 25.0** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/enapi/](https://apis.io/providers/enapi/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Enapi: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/enapi/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
